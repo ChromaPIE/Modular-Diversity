@@ -5,6 +5,7 @@ import hellfirepvp.modularmachinery.common.crafting.helper.ComponentOutputRestri
 import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.crafting.helper.CraftCheck;
 import hellfirepvp.modularmachinery.common.crafting.helper.RecipeCraftingContext;
+import hellfirepvp.modularmachinery.common.crafting.requirement.type.RequirementType;
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
 import hellfirepvp.modularmachinery.common.util.ResultChance;
 import modulardiversity.components.EnvironmentalComponent;
@@ -13,7 +14,7 @@ import modulardiversity.util.IResourceToken;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public abstract class RequirementEnvironmental<T, V extends IResourceToken> extends ComponentRequirement.PerTick<T> {
+public abstract class RequirementEnvironmental<T, V extends IResourceToken> extends ComponentRequirement.PerTick<T, V extends RequirementType<T, ? extends PerTick<T, V>>> {
     V checkToken;
     V outputToken;
     V perTickToken;
