@@ -40,6 +40,7 @@ repositories {
 }
 
 dependencies {
+    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${crafttweaker_version}"
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mysticalmechanics/files/2869691")
 	deobfCompile "mezz.jei:jei_1.12.2:4.14.4.267"
     deobfCompile "vazkii.botania:Botania:r1.10-355.4" //should this be deobfProvided?
