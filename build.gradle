@@ -47,7 +47,7 @@ dependencies {
     deobfCompile "hellfirepvp.modularmachinery:modularmachinery:1.12.2-1.11.0-v50"
     deobfCompile "blusunrize:ImmersiveEngineering:0.12-92-+"
     deobfCompile "betterwithmods:BetterWithMods:1.12-2.3.24-1068"
-    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mekanism/files/2835175")
+    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mekanism/files/2835176")
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mysticalmechanics/files/3006392")
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum/files/3382321")
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/embers-rekindled/files/3225431")
