@@ -56,12 +56,12 @@ public class RequirementWeather extends RequirementEnvironmental<Weather, Requir
     }*/
 
     @Override
-    public ComponentRequirement<Weather> deepCopy() {
+    public ComponentRequirement<Weather, RequirementWeather.ResourceToken> deepCopy() {
         return new RequirementWeather(this.getActionType(), this.weather);
     }
 
     @Override
-    public ComponentRequirement<Weather> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<Weather, RequirementWeather.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementWeather(this.getActionType(), this.weather);
     }
 

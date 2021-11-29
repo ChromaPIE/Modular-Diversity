@@ -14,7 +14,7 @@ import modulardiversity.util.ICraftingResourceHolder;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public abstract class RequirementConsumePerTick<T, V extends IResourceToken> extends ComponentRequirement.PerTick<T> {
+public abstract class RequirementConsumePerTick<T, V extends IResourceToken> extends ComponentRequirement.PerTick<T, V> {
     V checkToken;
     V perTickToken;
 
