@@ -13,7 +13,7 @@ import modulardiversity.util.IResourceToken;
 
 import java.util.List;
 
-public class RequirementAir extends RequirementConsumePerTick<Air, RequirementAir.ResourceToken, > {
+public class RequirementAir extends RequirementConsumePerTick<Air, RequirementAir.ResourceToken> {
     public final int volumeConsumed;
     public final float pressureRequired;
 
