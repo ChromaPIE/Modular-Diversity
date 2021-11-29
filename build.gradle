@@ -35,17 +35,21 @@ repositories {
     maven { url "http://dvs1.progwml6.com/files/maven" }
 	maven { url "http://www.ryanliptak.com/maven/" }
     maven { url "http://maven.blamejared.com" }
-    maven { url "https://modmaven.k-4u.nl" }
+    maven { url "https://modmaven.dev/" }
     maven { url "https://maven.hellfiredev.net"}
 }
 
 dependencies {
     deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.670"
-    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mysticalmechanics/files/2869691")
 	deobfCompile "mezz.jei:jei_1.12.2:4.14.4.267"
     deobfCompile "vazkii.botania:Botania:r1.10-355.4" //should this be deobfProvided?
     deobfCompile "me.desht.pneumaticcraft:pneumaticcraft-repressurized:1.12.2-0.9.1-317"
     deobfCompile "hellfirepvp.modularmachinery:modularmachinery:1.12.2-1.11.0-v50"
+    deobfCompile "blusunrize:ImmersiveEngineering:0.12-92-+"
+    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mekanism/download/2835176")
+    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mysticalmechanics/download/3006392")
+    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum/download/3382321")
+    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/embers-rekindled/download/3225431")
 }
 
 task deobfJar(type: Jar) {

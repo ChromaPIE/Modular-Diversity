@@ -95,12 +95,12 @@ public class RequirementPosition extends RequirementEnvironmental<Position, Requ
     }
 
     @Override
-    public ComponentRequirement<Position> deepCopy() {
+    public ComponentRequirement<Position, RequirementPosition.ResourceToken> deepCopy() {
         return new RequirementPosition(getActionType(),xMin, xMax,yMin,yMax,zMin,zMax,distanceMin,distanceMax,anchor);
     }
 
     @Override
-    public ComponentRequirement<Position> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<Position, RequirementPosition.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementPosition(getActionType(), xMin, xMax,yMin,yMax,zMin,zMax,distanceMin,distanceMax,anchor);
     }
 

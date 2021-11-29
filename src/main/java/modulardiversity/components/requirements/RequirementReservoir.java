@@ -105,12 +105,12 @@ public class RequirementReservoir extends RequirementEnvironmental<Reservoir, Re
     }
 
     @Override
-    public ComponentRequirement<Reservoir> deepCopy() {
+    public ComponentRequirement<Reservoir, RequirementReservoir.ResourceToken> deepCopy() {
         return new RequirementReservoir(getActionType(),name,fluidMin,fluidMax,residualMin,residualMax,amount);
     }
 
     @Override
-    public ComponentRequirement<Reservoir> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<Reservoir, RequirementReservoir.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementReservoir(getActionType(),
                 name,
                 Misc.applyModifiers(modifiers,"reservoir_min",getActionType(), fluidMin,false),

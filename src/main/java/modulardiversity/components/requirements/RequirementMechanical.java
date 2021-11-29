@@ -30,7 +30,7 @@ public class RequirementMechanical extends RequirementConsumePerTick<Mechanical,
     }
 
     @Override
-    public ComponentRequirement<Mechanical> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<Mechanical, RequirementMechanical.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementMechanical(getActionType(), Misc.applyModifiers(modifiers,"mechanical",getActionType(),requiredLevel,false),isCrankAllowed);
     }
 

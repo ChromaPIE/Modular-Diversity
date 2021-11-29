@@ -73,12 +73,12 @@ public class RequirementEmberWorld extends RequirementEnvironmental<EmberWorld, 
     }
 
     @Override
-    public ComponentRequirement<EmberWorld> deepCopy() {
+    public ComponentRequirement<EmberWorld, RequirementEmberWorld.ResourceToken> deepCopy() {
         return new RequirementEmberWorld(getActionType(),emberMin, emberMax,stabilityMin,stabilityMax);
     }
 
     @Override
-    public ComponentRequirement<EmberWorld> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<EmberWorld, RequirementEmberWorld.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementEmberWorld(getActionType(),
                 Misc.applyModifiers(modifiers,"ember_min",getActionType(), emberMin,false),
                 Misc.applyModifiers(modifiers,"ember_max",getActionType(), emberMax,false),

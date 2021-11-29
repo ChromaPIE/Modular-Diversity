@@ -63,12 +63,12 @@ public class RequirementMysticalMechanics extends RequirementConsumePerTick<Myst
     }
 
     @Override
-    public ComponentRequirement<MysticalMechanics> deepCopy() {
+    public ComponentRequirement<MysticalMechanics, RequirementMysticalMechanics.ResourceToken> deepCopy() {
         return new RequirementMysticalMechanics(getActionType(),requiredLevelMin,requiredLevelMax,levelOutput,time);
     }
 
     @Override
-    public ComponentRequirement<MysticalMechanics> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<MysticalMechanics, RequirementMysticalMechanics.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementMysticalMechanics(getActionType(),
                 Misc.applyModifiers(modifiers,"mysticalmechanics_min",getActionType(), requiredLevelMin,false),
                 Misc.applyModifiers(modifiers,"mysticalmechanics_max",getActionType(), requiredLevelMax,false),
