@@ -4,6 +4,7 @@ import hellfirepvp.modularmachinery.common.crafting.ComponentType.Registry;
 import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.crafting.helper.RecipeCraftingContext;
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.modifier.RecipeModifier;
 import modulardiversity.jei.JEIComponentDaylight;
 import modulardiversity.jei.ingredients.Daylight;
@@ -29,7 +30,7 @@ public class RequirementDaylight extends RequirementEnvironmental<Daylight,Requi
             return timeMin >= timeMax;
     }
 
-    public RequirementDaylight(MachineComponent.IOType actionType, long min, long max, long modulo, boolean local) {
+    public RequirementDaylight(IOType actionType, long min, long max, long modulo, boolean local) {
         super(Registry.getComponent("daylight"), actionType);
         timeMin = min;
         timeMax = max;
@@ -148,7 +149,7 @@ public class RequirementDaylight extends RequirementEnvironmental<Daylight,Requi
         }
 
         @Override
-        public void applyModifiers(RecipeCraftingContext modifiers, MachineComponent.IOType ioType, float durationMultiplier) {
+        public void applyModifiers(RecipeCraftingContext modifiers, IOType ioType, float durationMultiplier) {
 
         }
 

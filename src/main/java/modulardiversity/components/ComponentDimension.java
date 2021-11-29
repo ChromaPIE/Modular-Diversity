@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import hellfirepvp.modularmachinery.common.crafting.ComponentType;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.components.requirements.RequirementDimension;
 import modulardiversity.util.JsonUtil;
 
@@ -31,7 +31,7 @@ public class ComponentDimension extends ComponentType<RequirementDimension> {
 
     @Nonnull
     @Override
-    public RequirementDimension provideComponent(MachineComponent.IOType ioType, JsonObject requirement) {
+    public RequirementDimension provideComponent(IOType ioType, JsonObject requirement) {
         if (requirement.has(TAG_DIMENSION) && requirement.get(TAG_DIMENSION).isJsonPrimitive() && requirement.get(TAG_DIMENSION).getAsJsonPrimitive().isNumber()) {
             int biome = requirement.getAsJsonPrimitive(TAG_DIMENSION).getAsInt();
             return new RequirementDimension(ioType, biome);

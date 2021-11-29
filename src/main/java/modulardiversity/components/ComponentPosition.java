@@ -2,7 +2,7 @@ package modulardiversity.components;
 
 import com.google.gson.JsonObject;
 import hellfirepvp.modularmachinery.common.crafting.ComponentType;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.components.requirements.AnchorType;
 import modulardiversity.components.requirements.RequirementPosition;
 import modulardiversity.util.JsonUtil;
@@ -25,7 +25,7 @@ public class ComponentPosition extends ComponentType<RequirementPosition> {
 
     @Nonnull
     @Override
-    public RequirementPosition provideComponent(MachineComponent.IOType ioType, JsonObject requirement) {
+    public RequirementPosition provideComponent(IOType ioType, JsonObject requirement) {
 
         float xMin = JsonUtil.get(requirement, "xMin", Float.NEGATIVE_INFINITY);
         float xMax = JsonUtil.get(requirement, "xMax", Float.POSITIVE_INFINITY);

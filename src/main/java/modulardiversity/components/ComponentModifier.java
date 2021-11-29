@@ -3,7 +3,7 @@ package modulardiversity.components;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import hellfirepvp.modularmachinery.common.crafting.ComponentType;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.components.requirements.RequirementModifier;
 import modulardiversity.components.requirements.RequirementReservoir;
 import modulardiversity.util.JsonUtil;
@@ -26,7 +26,7 @@ public class ComponentModifier extends ComponentType<RequirementModifier> {
 
     @Nonnull
     @Override
-    public RequirementModifier provideComponent(MachineComponent.IOType ioType, JsonObject requirement) {
+    public RequirementModifier provideComponent(IOType ioType, JsonObject requirement) {
         if (requirement.has("name") && requirement.has("min") || requirement.has("max")) {
             String name = JsonUtil.get(requirement,"name",null);
             float min = JsonUtil.get(requirement,"min",Float.NEGATIVE_INFINITY);

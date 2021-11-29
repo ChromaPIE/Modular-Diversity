@@ -3,7 +3,7 @@ package modulardiversity.components;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import hellfirepvp.modularmachinery.common.crafting.ComponentType;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.components.requirements.RequirementMana;
 
 import javax.annotation.Nonnull;
@@ -24,7 +24,7 @@ public class ComponentMana extends ComponentType<RequirementMana> {
 
     @Nonnull
     @Override
-    public RequirementMana provideComponent(MachineComponent.IOType ioType, JsonObject requirement) {
+    public RequirementMana provideComponent(IOType ioType, JsonObject requirement) {
         if(requirement.has("mana") && requirement.get("mana").isJsonPrimitive() && requirement.get("mana").getAsJsonPrimitive().isNumber()) {
             int manaRequired = requirement.getAsJsonPrimitive("mana").getAsInt();
             return new RequirementMana(ioType, manaRequired);

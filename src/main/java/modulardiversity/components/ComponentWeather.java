@@ -3,7 +3,7 @@ package modulardiversity.components;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import hellfirepvp.modularmachinery.common.crafting.ComponentType;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.components.requirements.RequirementWeather;
 import modulardiversity.util.JsonUtil;
 
@@ -28,7 +28,7 @@ public class ComponentWeather extends ComponentType<RequirementWeather> {
 
     @Nonnull
     @Override
-    public RequirementWeather provideComponent(MachineComponent.IOType ioType, JsonObject requirement) {
+    public RequirementWeather provideComponent(IOType ioType, JsonObject requirement) {
         if (requirement.has("weather") && requirement.get("weather").isJsonPrimitive() && requirement.get("weather").getAsJsonPrimitive().isString()) {
             String weather = requirement.get("weather").getAsString();
             return (RequirementWeather) new RequirementWeather(ioType, RequirementWeather.Type.valueOf(weather)).setPerTick(JsonUtil.getPerTick(requirement));

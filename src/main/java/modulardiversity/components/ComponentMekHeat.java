@@ -3,7 +3,7 @@ package modulardiversity.components;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import hellfirepvp.modularmachinery.common.crafting.ComponentType;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.components.requirements.RequirementMechanical;
 import modulardiversity.components.requirements.RequirementMekHeat;
 
@@ -25,11 +25,11 @@ public class ComponentMekHeat extends ComponentType<RequirementMekHeat> {
 
     @Nonnull
     @Override
-    public RequirementMekHeat provideComponent(MachineComponent.IOType ioType, JsonObject requirement) {
+    public RequirementMekHeat provideComponent(IOType ioType, JsonObject requirement) {
         return provideComponentInternal(ioType, requirement);
     }
 
-    private RequirementMekHeat provideComponentInternal(MachineComponent.IOType ioType, JsonObject requirement) {
+    private RequirementMekHeat provideComponentInternal(IOType ioType, JsonObject requirement) {
         double temperatureRequiredMin = requirement.has("temperatureRequiredMin") ? requirement.getAsJsonPrimitive("temperatureRequiredMin").getAsDouble() : 0;
         double temperatureRequiredMax = requirement.has("temperatureRequiredMax") ? requirement.getAsJsonPrimitive("temperatureRequiredMax").getAsDouble() : Double.POSITIVE_INFINITY;
         double temperature = requirement.has("temperature") ? requirement.getAsJsonPrimitive("temperature").getAsDouble() : 0;

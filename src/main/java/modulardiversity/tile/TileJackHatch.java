@@ -1,6 +1,7 @@
 package modulardiversity.tile;
 
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.tiles.base.MachineComponentTile;
 import hellfirepvp.modularmachinery.common.tiles.base.TileColorableMachineComponent;
 import hellfirepvp.modularmachinery.common.util.HybridTank;
@@ -11,7 +12,7 @@ import javax.annotation.Nullable;
 
 public class TileJackHatch extends TileColorableMachineComponent {
     private ReservoirTank tank;
-    private MachineComponent.IOType ioType = MachineComponent.IOType.INPUT;
+    private IOType ioType = IOType.INPUT;
 
     public TileJackHatch() {
         this.tank = new ReservoirTank();

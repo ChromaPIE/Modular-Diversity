@@ -3,7 +3,7 @@ package modulardiversity.components;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import hellfirepvp.modularmachinery.common.crafting.ComponentType;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.components.requirements.RequirementMineral;
 import modulardiversity.util.JsonUtil;
 
@@ -25,7 +25,7 @@ public class ComponentMineral extends ComponentType<RequirementMineral> {
 
     @Nonnull
     @Override
-    public RequirementMineral provideComponent(MachineComponent.IOType ioType, JsonObject requirement) {
+    public RequirementMineral provideComponent(IOType ioType, JsonObject requirement) {
         if (requirement.has("name")) {
             String name = JsonUtil.get(requirement,"name",null);
             int oreMin = JsonUtil.get(requirement,"oreMin",0);

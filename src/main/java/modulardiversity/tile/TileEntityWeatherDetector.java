@@ -1,6 +1,7 @@
 package modulardiversity.tile;
 
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.tiles.base.MachineComponentTile;
 import hellfirepvp.modularmachinery.common.tiles.base.TileColorableMachineComponent;
 import modulardiversity.components.MachineComponents;
@@ -16,7 +17,7 @@ import javax.annotation.Nullable;
 import static modulardiversity.block.BlockWeatherDetector.WEATHER_TYPE;
 
 public class TileEntityWeatherDetector extends TileColorableMachineComponent implements ITickable {
-    private MachineComponent.IOType ioType = MachineComponent.IOType.INPUT;
+    private IOType ioType = IOType.INPUT;
 
     public TileEntityWeatherDetector() {
         System.out.println("Created Tile Entity Weather Detector");

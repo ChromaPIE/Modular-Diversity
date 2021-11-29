@@ -3,7 +3,7 @@ package modulardiversity.jei;
 import com.google.common.collect.Lists;
 import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.integration.recipe.RecipeLayoutPart;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import mezz.jei.api.ingredients.IIngredientRenderer;
 import modulardiversity.components.requirements.RequirementMechanical;
 import modulardiversity.components.requirements.RequirementMysticalMechanics;
@@ -33,7 +33,7 @@ public class JEIComponentMysticalMechanics extends ComponentRequirement.JEICompo
     @Override
     public List<MysticalMechanics> getJEIIORequirements() {
         MysticalMechanics mysticalMechanics;
-        if(requirement.getActionType() == MachineComponent.IOType.INPUT) {
+        if(requirement.getActionType() == IOType.INPUT) {
             mysticalMechanics = new MysticalMechanics(requirement.getRequiredLevelMin(), requirement.getRequiredLevelMax());
         } else {
             mysticalMechanics = new MysticalMechanics(requirement.getLevelOutput());

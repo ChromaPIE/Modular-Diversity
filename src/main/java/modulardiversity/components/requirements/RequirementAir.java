@@ -5,6 +5,7 @@ import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.crafting.helper.RecipeCraftingContext;
 import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.modifier.RecipeModifier;
 import modulardiversity.components.MachineComponents;
 import modulardiversity.jei.JEIComponentAir;
@@ -73,7 +74,7 @@ public class RequirementAir extends RequirementConsumePerTick<Air, RequirementAi
         }
 
         @Override
-        public void applyModifiers(RecipeCraftingContext modifiers, MachineComponent.IOType ioType, float durationMultiplier) {
+        public void applyModifiers(RecipeCraftingContext modifiers, IOType ioType, float durationMultiplier) {
 
         }
 

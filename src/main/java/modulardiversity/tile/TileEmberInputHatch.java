@@ -1,6 +1,7 @@
 package modulardiversity.tile;
 
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.block.prop.EmberHatchSize;
 import modulardiversity.components.MachineComponents;
 import modulardiversity.components.requirements.RequirementEmber;
@@ -21,7 +22,7 @@ public class TileEmberInputHatch extends TileEntityEmber {
     @Nullable
     @Override
     public MachineComponent provideComponent() {
-        return new MachineComponents.EmberHatch(MachineComponent.IOType.INPUT) {
+        return new MachineComponents.EmberHatch(IOType.INPUT) {
             @Override
             public ICraftingResourceHolder<RequirementEmber.ResourceToken> getContainerProvider() {
                 return TileEmberInputHatch.this;

@@ -4,6 +4,7 @@ import hellfirepvp.modularmachinery.common.crafting.ComponentType;
 import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.crafting.helper.RecipeCraftingContext;
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.modifier.RecipeModifier;
 import modulardiversity.jei.JEIComponentBiome;
 import modulardiversity.jei.ingredients.BiomeIngredient;
@@ -23,18 +24,18 @@ import java.util.stream.Collectors;
 public class RequirementBiome extends RequirementEnvironmental<BiomeIngredient,RequirementBiome.ResourceToken> {
     private HashSet<String> biomes;
 
-    public RequirementBiome(MachineComponent.IOType actionType, String biome) {
+    public RequirementBiome(IOType actionType, String biome) {
         super(ComponentType.Registry.getComponent("biome"), actionType);
         biomes = new HashSet<>();
         this.biomes.add(biome);
     }
 
-    public RequirementBiome(MachineComponent.IOType actionType, Collection<String> biomes) {
+    public RequirementBiome(IOType actionType, Collection<String> biomes) {
         super(ComponentType.Registry.getComponent("biome"), actionType);
         this.biomes = new HashSet<>(biomes);
     }
 
-    public RequirementBiome(MachineComponent.IOType actionType, String[] biomes) {
+    public RequirementBiome(IOType actionType, String[] biomes) {
         super(ComponentType.Registry.getComponent("biome"), actionType);
         this.biomes = new HashSet<>();
         for (String biome : biomes) {
@@ -150,7 +151,7 @@ public class RequirementBiome extends RequirementEnvironmental<BiomeIngredient,R
         }
 
         @Override
-        public void applyModifiers(RecipeCraftingContext modifiers, MachineComponent.IOType ioType, float durationMultiplier) {
+        public void applyModifiers(RecipeCraftingContext modifiers, IOType ioType, float durationMultiplier) {
 
         }
 

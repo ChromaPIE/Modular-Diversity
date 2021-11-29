@@ -4,6 +4,7 @@ import hellfirepvp.modularmachinery.common.crafting.ComponentType;
 import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.crafting.helper.RecipeCraftingContext;
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.modifier.RecipeModifier;
 import modulardiversity.jei.JEIComponentPosition;
 import modulardiversity.jei.ingredients.Position;
@@ -23,7 +24,7 @@ public class RequirementPosition extends RequirementEnvironmental<Position, Requ
     public float distanceMin, distanceMax;
     public AnchorType anchor;
 
-    public RequirementPosition(MachineComponent.IOType actionType, float xMin, float xMax, float yMin, float yMax, float zMin, float zMax, float distanceMin, float distanceMax, AnchorType anchor) {
+    public RequirementPosition(IOType actionType, float xMin, float xMax, float yMin, float yMax, float zMin, float zMax, float distanceMin, float distanceMax, AnchorType anchor) {
         super(ComponentType.Registry.getComponent("position"), actionType);
         this.xMin = xMin;
         this.xMax = xMax;
@@ -117,7 +118,7 @@ public class RequirementPosition extends RequirementEnvironmental<Position, Requ
         }
 
         @Override
-        public void applyModifiers(RecipeCraftingContext modifiers, MachineComponent.IOType ioType, float durationMultiplier) {
+        public void applyModifiers(RecipeCraftingContext modifiers, IOType ioType, float durationMultiplier) {
         }
 
         @Override

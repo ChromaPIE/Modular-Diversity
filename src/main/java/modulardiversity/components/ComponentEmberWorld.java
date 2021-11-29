@@ -2,7 +2,7 @@ package modulardiversity.components;
 
 import com.google.gson.JsonObject;
 import hellfirepvp.modularmachinery.common.crafting.ComponentType;
-import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import modulardiversity.components.requirements.RequirementAura;
 import modulardiversity.components.requirements.RequirementEmberWorld;
 import modulardiversity.util.JsonUtil;
@@ -25,7 +25,7 @@ public class ComponentEmberWorld extends ComponentType<RequirementEmberWorld> {
 
     @Nonnull
     @Override
-    public RequirementEmberWorld provideComponent(MachineComponent.IOType ioType, JsonObject requirement) {
+    public RequirementEmberWorld provideComponent(IOType ioType, JsonObject requirement) {
 
             float emberMin = JsonUtil.get(requirement,"emberMin",0f);
             float emberMax = JsonUtil.get(requirement,"emberMax", Float.MAX_VALUE);

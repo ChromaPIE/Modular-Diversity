@@ -6,6 +6,7 @@ import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.crafting.helper.CraftCheck;
 import hellfirepvp.modularmachinery.common.crafting.helper.RecipeCraftingContext;
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.util.ResultChance;
 import modulardiversity.util.IResourceToken;
 import modulardiversity.util.ICraftingResourceHolder;
@@ -17,7 +18,7 @@ public abstract class RequirementConsumePerTick<T, V extends IResourceToken> ext
     V checkToken;
     V perTickToken;
 
-    public RequirementConsumePerTick(ComponentType componentType, MachineComponent.IOType actionType) {
+    public RequirementConsumePerTick(ComponentType componentType, IOType actionType) {
         super(componentType, actionType);
     }
 
@@ -87,7 +88,7 @@ public abstract class RequirementConsumePerTick<T, V extends IResourceToken> ext
         this.perTickToken = emitConsumptionToken(context);
         if(enough)
             return CraftCheck.success();
-        else if(getActionType() == MachineComponent.IOType.INPUT)
+        else if(getActionType() == IOType.INPUT)
             return CraftCheck.failure(getMissingInput());
         else
             return CraftCheck.failure(getMissingOutput());

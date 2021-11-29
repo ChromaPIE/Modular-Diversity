@@ -4,6 +4,7 @@ import hellfirepvp.modularmachinery.common.crafting.ComponentType;
 import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.crafting.helper.RecipeCraftingContext;
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.modifier.RecipeModifier;
 import modulardiversity.jei.JEIComponentDimension;
 import modulardiversity.jei.ingredients.DimensionIngredient;
@@ -21,18 +22,18 @@ import java.util.stream.Collectors;
 public class RequirementDimension extends RequirementEnvironmental<DimensionIngredient, RequirementDimension.ResourceToken> {
     private HashSet<Integer> dimensions;
 
-    public RequirementDimension(MachineComponent.IOType actionType, int biome) {
+    public RequirementDimension(IOType actionType, int biome) {
         super(ComponentType.Registry.getComponent("dimension"), actionType);
         dimensions = new HashSet<>();
         this.dimensions.add(biome);
     }
 
-    public RequirementDimension(MachineComponent.IOType actionType, Collection<Integer> dimensions) {
+    public RequirementDimension(IOType actionType, Collection<Integer> dimensions) {
         super(ComponentType.Registry.getComponent("dimension"), actionType);
         this.dimensions = new HashSet<>(dimensions);
     }
 
-    public RequirementDimension(MachineComponent.IOType actionType, int[] dimensions) {
+    public RequirementDimension(IOType actionType, int[] dimensions) {
         super(ComponentType.Registry.getComponent("dimension"), actionType);
         this.dimensions = new HashSet<>();
         for (int dimension : dimensions) {
@@ -148,7 +149,7 @@ public class RequirementDimension extends RequirementEnvironmental<DimensionIngr
         }
 
         @Override
-        public void applyModifiers(RecipeCraftingContext modifiers, MachineComponent.IOType ioType, float durationMultiplier) {
+        public void applyModifiers(RecipeCraftingContext modifiers, IOType ioType, float durationMultiplier) {
 
         }
 
