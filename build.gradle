@@ -51,6 +51,8 @@ dependencies {
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mysticalmechanics/files/3006392")
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum/files/3382321")
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/embers-rekindled/files/3225431")
+    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/prodigy-tech/files/2769520")
+    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/buildcraft/files/3204475")
 }
 
 task deobfJar(type: Jar) {

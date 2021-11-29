@@ -51,12 +51,12 @@ public class RequirementMekHeat extends RequirementConsumePerTick<MekHeat, Requi
     }
 
     @Override
-    public ComponentRequirement<MekHeat> deepCopy() {
+    public ComponentRequirement<MekHeat, RequirementMekHeat.ResourceToken> deepCopy() {
         return new RequirementMekHeat(getActionType(),temperature, temperatureRequiredMin, temperatureRequiredMax);
     }
 
     @Override
-    public ComponentRequirement<MekHeat> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<MekHeat, RequirementMekHeat.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementMekHeat(getActionType(),
                 Misc.applyModifiers(modifiers,"mekheat",getActionType(),temperature,false),
                 Misc.applyModifiers(modifiers,"mekheat_min",getActionType(),temperatureRequiredMin,false),

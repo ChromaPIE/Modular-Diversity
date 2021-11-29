@@ -42,7 +42,7 @@ public class RequirementAir extends RequirementConsumePerTick<Air, RequirementAi
     }
 
     @Override
-    public ComponentRequirement<Air> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<Air, RequirementAir.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementAir(getActionType(),volumeConsumed,pressureRequired);
     }
 

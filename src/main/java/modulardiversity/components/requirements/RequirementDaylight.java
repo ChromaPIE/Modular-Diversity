@@ -83,7 +83,7 @@ public class RequirementDaylight extends RequirementEnvironmental<Daylight,Requi
     }
 
     @Override
-    public ComponentRequirement<Daylight> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<Daylight, RequirementDaylight.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementDaylight(this.getActionType(), timeMin, timeMax, timeModulo, timeLocal);
     }
 

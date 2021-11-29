@@ -80,12 +80,12 @@ public class RequirementBiome extends RequirementEnvironmental<BiomeIngredient,R
     }*/
 
     @Override
-    public ComponentRequirement<BiomeIngredient> deepCopy() {
+    public ComponentRequirement<BiomeIngredient, RequirementBiome.ResourceToken> deepCopy() {
         return new RequirementBiome(this.getActionType(), this.biomes);
     }
 
     @Override
-    public ComponentRequirement<BiomeIngredient> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<BiomeIngredient, RequirementBiome.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementBiome(this.getActionType(), this.biomes);
     }
 

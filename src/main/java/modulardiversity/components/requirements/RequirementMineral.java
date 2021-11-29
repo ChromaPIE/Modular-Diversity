@@ -88,12 +88,12 @@ public class RequirementMineral extends RequirementEnvironmental<Mineral, Requir
     }
 
     @Override
-    public ComponentRequirement<Mineral> deepCopy() {
+    public ComponentRequirement<Mineral, RequirementMineral.ResourceToken> deepCopy() {
         return new RequirementMineral(getActionType(),name, oreMin, oreMax,amount);
     }
 
     @Override
-    public ComponentRequirement<Mineral> deepCopyModified(List<RecipeModifier> modifiers) {
+    public ComponentRequirement<Mineral, RequirementMineral.ResourceToken> deepCopyModified(List<RecipeModifier> modifiers) {
         return new RequirementMineral(getActionType(),
                 name,
                 Misc.applyModifiers(modifiers,"mineral_min",getActionType(), oreMin,false),
