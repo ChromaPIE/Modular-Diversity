@@ -14,7 +14,7 @@ import modulardiversity.util.IResourceToken;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public abstract class RequirementEnvironmental<T, V extends IResourceToken> extends ComponentRequirement.PerTick<T, V extends RequirementType<T, ? extends PerTick<T, V>>> {
+public abstract class RequirementEnvironmental<T, V extends IResourceToken> extends ComponentRequirement.PerTick<T, V> {
     V checkToken;
     V outputToken;
     V perTickToken;
