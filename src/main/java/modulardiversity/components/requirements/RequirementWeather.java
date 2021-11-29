@@ -4,6 +4,7 @@ import hellfirepvp.modularmachinery.common.crafting.ComponentType;
 import hellfirepvp.modularmachinery.common.crafting.helper.ComponentRequirement;
 import hellfirepvp.modularmachinery.common.crafting.helper.RecipeCraftingContext;
 import hellfirepvp.modularmachinery.common.machine.MachineComponent;
+import hellfirepvp.modularmachinery.common.machine.IOType;
 import hellfirepvp.modularmachinery.common.modifier.RecipeModifier;
 import modulardiversity.jei.JEIComponentWeather;
 import modulardiversity.jei.ingredients.Weather;
@@ -25,7 +26,7 @@ public class RequirementWeather extends RequirementEnvironmental<Weather, Requir
 
     public Type weather;
 
-    public RequirementWeather(MachineComponent.IOType actionType, Type weather) {
+    public RequirementWeather(IOType actionType, Type weather) {
         super(ComponentType.Registry.getComponent("weather"), actionType);
         this.weather = weather;
     }
@@ -38,7 +39,6 @@ public class RequirementWeather extends RequirementEnvironmental<Weather, Requir
         }
         return false;
     }
-
     @Override
     public boolean finishCrafting(MachineComponent component, RecipeCraftingContext context, ResultChance chance) {
         if (component.getComponentType().equals(this.getRequiredComponentType()) && component instanceof MachineComponents.WeatherDetector && component.getIOType() == this.getActionType()) {
@@ -46,7 +46,6 @@ public class RequirementWeather extends RequirementEnvironmental<Weather, Requir
         }
         return false;
     }
-
     @Override
     public CraftCheck canStartCrafting(MachineComponent component, RecipeCraftingContext context, List<ComponentOutputRestrictor> list) {
         if (component.getComponentType().equals(this.getRequiredComponentType()) && component instanceof MachineComponents.WeatherDetector && component.getIOType() == this.getActionType()) {
@@ -69,7 +68,6 @@ public class RequirementWeather extends RequirementEnvironmental<Weather, Requir
     /*@Override
     public void startRequirementCheck(ResultChance resultChance, RecipeCraftingContext recipeCraftingContext) {
     }
-
     @Override
     public void endRequirementCheck() {
     }*/
@@ -184,7 +182,7 @@ public class RequirementWeather extends RequirementEnvironmental<Weather, Requir
         }
 
         @Override
-        public void applyModifiers(RecipeCraftingContext modifiers, MachineComponent.IOType ioType, float durationMultiplier) {
+        public void applyModifiers(RecipeCraftingContext modifiers, IOType ioType, float durationMultiplier) {
 
         }
 
