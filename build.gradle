@@ -46,6 +46,7 @@ dependencies {
     deobfCompile "me.desht.pneumaticcraft:pneumaticcraft-repressurized:1.12.2-0.9.1-317"
     deobfCompile "hellfirepvp.modularmachinery:modularmachinery:1.12.2-1.11.0-v50"
     deobfCompile "blusunrize:ImmersiveEngineering:0.12-92-+"
+    deobfCompile "betterwithmods:BetterWithMods:1.12-2.3.24-1068"
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mekanism/download/2835176")
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/mysticalmechanics/download/3006392")
     deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum/download/3382321")
